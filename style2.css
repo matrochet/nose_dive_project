@@ -1,0 +1,284 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 15px;
+}
+
+/* Header */
+header {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 10px 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+/* Styles pour le nav */
+nav {
+  margin-top: 10px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+/* .nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border: 2px solid white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+} */
+
+.nav-links a:hover {
+  background-color: white;
+  color: #79b983;
+}
+
+/* Carrousel */
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 400px;
+  /* lignes fournies par chat gpt */
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  /* lignes fournies par chat gpt */
+  object-fit: contain; /* Cette propriété garantit que l'image est entièrement visible dans le conteneur */
+  /* object-fit: cover;  <-- Si tu préfères que l'image couvre tout l'espace, tu peux utiliser cette ligne à la place, mais l'image sera peut-être partiellement coupée */
+  display: block;
+}
+
+/* Contrôles de navigation */
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  /* left: 0;
+  right: 0; */
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 100%;
+}
+
+.carousel-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  pointer-events: all;
+  border-radius: 50%;
+  /* font-size: 24px */
+  transition: background-color 0.3s ease;
+}
+
+.carousel-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Points de navigation */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  pointer-events: none;
+}
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: all;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dots .active {
+  background-color: #2c3e50;
+}
+
+.carousel-dots .inactive {
+  opacity: 0.5;
+}
+
+/* CSS Page Discours */
+
+/* Section de contenu */
+.content {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.illustration {
+  width: 100%; /* Taille fixe des images */
+  max-width: 100%; /* S'assure que l'image ne dépasse pas */
+  /* height: auto; Conserve les proportions de l'image */
+  border-radius: 8px; /* Coins légèrement arrondis */
+  margin-right: 20px; /* Espace entre l'image et le texte */
+}
+
+/* CSS Page Discours */
+
+.block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  /* flex-wrap: wrap; S'assure que le contenu se réorganise sur petits écrans */
+}
+/* 
+.main {
+  /* display: inline-flex; */
+
+p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin-left: 30px;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  border-radius: 10px 10px 0 0;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .slide {
+    height: 250px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-controls button {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .carousel-dots .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  footer p {
+    font-size: 0.9em;
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .carousel-inner {
+    height: 300px; /* Redimensionnement pour petits écrans */
+  }
+
+  .carousel-controls button {
+    padding: 10px;
+  }
+}
+
+/* Pour les petits écrans (mobiles) */
+@media (max-width: 768px) {
+  .block {
+    flex-direction: column; /* Réorganise le contenu en colonne */
+    align-items: center; /* Centre le texte et l'image */
+  }
+
+  .illustration {
+    margin: 0 0 15px 0; /* Réduit les marges autour des images */
+    width: 100%; /* Images prennent toute la largeur disponible */
+    max-width: 300px; /* Limite la taille maximale sur petits écrans */
+  }
+
+  .block:nth-child(even) .illustration,
+  .block:nth-child(odd) .illustration {
+    order: 0; /* Sur mobile, toutes les images sont au-dessus des paragraphes */
+  }
+}
