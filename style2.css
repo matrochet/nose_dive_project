@@ -382,3 +382,51 @@ footer p {
 }
 
 /* CSS de la page asso.html */
+/* CSS spécifique à la page asso.html */
+.presentassion {
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.presentassion p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Styles supplémentaires pour l'association */
+.presentassion h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.presentassion ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.presentassion ul li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+}
+
+.presentassion ul li::marker {
+  color: #3498db;
+}
+
+@media (max-width: 768px) {
+  .presentassion {
+    padding: 15px;
+  }
+
+  .presentassion p {
+    font-size: 1rem;
+  }
+}
