@@ -65,7 +65,7 @@ nav {
 /* Bouton menu déroulant avec reponsive */
 /* Menu déroulant caché par défaut */
 .menu-toggle {
-  display: inline-block;
+  display: none;
   background: #007bff;
   color: white;
   border: none;
@@ -85,11 +85,11 @@ nav {
 
   .nav-links.active {
     display: flex; /* Afficher les liens lorsque le menu est ouvert */
-    margin: 0 auto;
   }
 
   .menu-toggle {
     display: block; /* Afficher le bouton de menu */
+    margin: 0 auto;
   }
 }
 
