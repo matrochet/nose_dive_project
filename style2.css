@@ -62,6 +62,37 @@ nav {
   color: #79b983;
 }
 
+/* Bouton menu déroulant avec reponsive */
+/* Menu déroulant caché par défaut */
+.menu-toggle {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Cacher les liens par défaut */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links.active {
+    display: flex; /* Afficher les liens lorsque le menu est ouvert */
+    margin: 0 auto;
+  }
+
+  .menu-toggle {
+    display: block; /* Afficher le bouton de menu */
+  }
+}
+
 .citation {
   text-align: center;
 }
